@@ -30,8 +30,7 @@ public class PlayerController : MonoBehaviourPun, IPunObservable
     {
         _photonView = GetComponent<PhotonView>();
         _animator = GetComponent<Animator>();
-
-
+        
         _spriteRenderer = GetComponent<SpriteRenderer>();
 
         if (_photonView.IsMine)
@@ -84,8 +83,7 @@ public class PlayerController : MonoBehaviourPun, IPunObservable
         transform.position = clampedPosition;
 
         if (movement.magnitude > 0)
-        {
-            
+        {        
             _lastMovementDirection = movement.normalized;
             _spriteRenderer.flipX = _lastMovementDirection.x > 0;
         }
