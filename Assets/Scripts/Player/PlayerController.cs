@@ -32,7 +32,7 @@ public class PlayerController : MonoBehaviourPun, IPunObservable
         _animator = GetComponent<Animator>();
 
 
-        _spriteRenderer = GetComponentInChildren<SpriteRenderer>();
+        _spriteRenderer = GetComponent<SpriteRenderer>();
 
         if (_photonView.IsMine)
         {
